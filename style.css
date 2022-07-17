@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.2rem;
+}
+/* body'nin font-size ı 12px oldu(10px * 1.2rem) , html etkiketine font-size 10px verdiğimiz için */
+.calculator{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* Son 4 satır kod: Hesap makinesini sitenin tam ortasını alır. */
+}
+
+.calculator-input {
+    width: 100%;
+    font-size: 4rem;
+    height: 70px;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+button {
+    height: 50px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+button:hover{
+    background-color: #eaeaea;
+}
+/* mouse ile üstüne geldiğin zaman renk değiştirmeye yarar */
+
+.operator{
+    color: #337cac;
+}
+
+.clear {
+    background-color: #f0595f;
+    border-color: #b0353a;
+    color: #fff;
+}  
+
+.clear:hover{
+    background-color: #f17377;
+}
+
+.equal-sign{
+    background-color: #2e86c0;
+    border-color: #337cac;
+    color: #fff;
+    grid-area: 2/4/6/5;
+    /* eşittir işaretinin konumu: başlangıcı 2. satır 4. sütun ,, bitişi 6. satır 5. sütun */
+    height: 100%;
+}
+
+.equal-sign:hover{
+    background-color: #4e9ed4;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* 4 sütun olarak tablo şeklinde ayırmaya yarar */
+    grid-gap: 20px;
+    padding: 20px;
+}
